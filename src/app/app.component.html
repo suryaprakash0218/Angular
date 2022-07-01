@@ -1,0 +1,10 @@
+<app-testing (donald)="outputData($event)" [data]="update" (trump)="updateHandler($event)"></app-testing>
+
+<div *ngFor="let data of OutputData;let i = index">
+    <div>{{i+1}}</div>
+    <div>{{data.name}}</div>
+    <div>{{data.age}}</div>
+    <div>{{data.city}}</div>
+    <button (click)="deleteData(data)">delete</button>
+    <button (click)="updateData(data,i)">Update</button>
+</div>
